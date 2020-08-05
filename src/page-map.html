@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuttle Amarelo</title>
+
+    <link rel="shortcut icon" href="./images/icons/shuttle_yellow.svg">
+    
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/partials/page-map.css">
+    <link rel="stylesheet" href="./styles/partials/header.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+
+</head>
+<body id="page-map">
+    <div id="container">
+        <header class="page-header">
+            <div class="top-bar-container">
+                <a href="./index.html">
+                    <img src="./images/icons/back.svg" alt="Voltar">
+                </a>
+                <img src="./images/logo.svg" alt="Logo">
+            </div>
+
+            <div class="header-content">
+                <strong>Acompanhe seu Shuttle online</strong>
+            </div>
+        </header>
+        <main>
+            <div class="locals">
+                <div class="shuttle">
+                    <label class="osasco" for="osasco">Estação Osasco</label>
+                    <img src="./images/icons/right_arrow.svg" alt="arrow">
+                    <label class="melicidade" for="melicidade">Melicidade</label>
+                    <label id="time" for="time">Chegará em 2 minutos</label>
+                </div>
+
+                <div class="shuttle">
+                    <label class="presidente-altino" for="presidente-altino">Estação Presidente Altino</label>
+                    <img src="./images/icons/left_arrow.svg" alt="arrow">
+                    <label class="melicidade" for="melicidade">Melicidade</label>
+                    <label id="time" for="time">Chegará em 2 minutos</label>
+                </div>
+            </div>
+        </main>
+        <div id="map"></div>
+        <script src="scripts/map.js"></script>
+        <!-- <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAON37c_O9vjmrdR-RZ8jlJK2g7CCLtjdA&callback=initMap" async defer> -->
+        <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCgNH5Vuuf59Vp53ZFtacSj_0QObkaH89A&callback=initMap" async defer>
+        </script>
+    </div>
+
+</body>
+</html>

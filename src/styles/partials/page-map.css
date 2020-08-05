@@ -1,0 +1,193 @@
+#page-map #container {
+    width: 100vw;
+    height: 100vh;
+}
+
+#page-map .page-header .header-content {
+    margin-bottom: 4rem;
+}
+
+#page-map main {
+    width: 100vw;
+    /* max-width: 74rem; */
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.locals .shuttle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem 1.5rem 1rem;
+} 
+
+.osasco {
+    background: var(--color-primary-dark);
+    width: 15rem;
+    height: 6rem;
+    border-radius: 0.8rem;
+    /* font-weight: 700; */
+    font-size: 1.5rem;
+    font-family: Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-title-in-primary);
+    text-align: center;
+}
+
+.presidente-altino {
+    background: var(--color-secondary);
+    width: 15rem;
+    height: 6rem;
+    border-radius: 0.8rem;
+    /* font-weight: 700; */
+    font-size: 1.5rem;
+    font-family: Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-in-primary);
+    text-align: center;
+}
+
+.melicidade {
+    background: var(--color-primary);
+    width: 15rem;
+    height: 6rem;
+    border-radius: 0.8rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-title-in-primary);
+}
+
+#time {
+    font-size: 1.5rem;
+    font-family: Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-title-in-primary);
+    text-align: center;
+}
+
+
+.shuttle img {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+
+}
+
+#map {
+    height:100vh;
+    width: 100vw;
+}
+
+@media (min-width: 700px) {
+    #page-map #container {
+        max-width: 100vw;
+    }
+
+    #page-map .page-header .header-content {
+        margin-bottom: 3.2rem;
+        height: 200px;
+    }
+
+    #page-map main{
+        max-width: 100vw;
+    }
+
+    .locals {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 1rem 1.5rem 1rem;
+    } 
+    }
+
+    .shuttle {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 1rem 1.5rem 1rem;
+    } 
+    
+    .osasco {
+        background: var(--color-primary-dark);
+        width: 17rem;
+        height: 6rem;
+        border-radius: 0.8rem;
+        /* font-weight: 700; */
+        font-size: 1.6rem;
+        font-family: Archivo;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-title-in-primary);
+        text-align: center;
+    }
+    
+    .presidente-altino {
+        background: var(--color-secondary);
+        width: 17rem;
+        height: 6rem;
+        border-radius: 0.8rem;
+        /* font-weight: 700; */
+        font-size: 1.6rem;
+        font-family: Archivo;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-text-in-primary);
+        text-align: center;
+    }
+    
+    .melicidade {
+        background: var(--color-primary);
+        width: 17rem;
+        height: 6rem;
+        border-radius: 0.8rem;
+        font-weight: 700;
+        font-size: 1.6rem;
+        font-family: Archivo;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-title-in-primary);
+    }
+    
+    #time {
+        font-size: 1.5rem;
+        font-family: Archivo;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-title-in-primary);
+        text-align: center;
+        margin-left: 2rem;
+    }
+    
+    
+    .shuttle img {
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 1rem;
+    
+    }
+
+
+}

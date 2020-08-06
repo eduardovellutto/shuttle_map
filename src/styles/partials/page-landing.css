@@ -9,6 +9,10 @@
 .logo-container {
     text-align: center;
     margin-bottom: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .logo-container h2 {
     font-weight: 500;
@@ -18,7 +22,7 @@
 }
 
 .logo-container img {
-    height: 20rem;
+    height: 25rem;
 }
 
 .shuttle-image {
@@ -92,7 +96,7 @@
         grid-template-columns: 2fr 1fr 2fr;
         grid-template-rows: 350px 1fr;
         grid-template-areas: "logo image image" "button button button";
-        gap: 60px;
+        
     }
 
     .logo-container {
@@ -103,7 +107,15 @@
     }
 
     .logo-container img {
-        height: 200px;
+        height: 300px;
+    }
+
+    .logo-container h2 {
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 4.6rem;
+        margin-top: 0.8rem;
+        text-align: center;
     }
 
     .shuttle-image {

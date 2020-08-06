@@ -1,12 +1,11 @@
+document.querySelector(".presidente-altino").addEventListener('click', function() {traceRoute(true)})
+document.querySelector(".osasco").addEventListener('click', function() {traceRoute(false)})
+
 var map;
 var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
 
 
-
-
 function initMap() {
-
-
 
     var mapOptions = {
         center: {lat: -23.526310,
@@ -309,11 +308,10 @@ function initMap() {
     };
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    traceRoute();
-
 }
 
-function traceRoute() {
+function traceRoute(route) {
+        initMap();
 
     /*fazer um request via http para api e trazer as coordenadas da origem e destino
 
@@ -321,49 +319,84 @@ function traceRoute() {
     var destination = new google.maps.LatLng(latDestination, lngDestination);
 
     */
-   var destination = new google.maps.LatLng(-23.526310, -46.761917);
-   var osasco = new google.maps.LatLng(-23.526464, -46.776838);
-   var origin = new google.maps.LatLng(-23.531192, -46.761812);
+   var destination = new google.maps.LatLng(-23.526310, -46.761917);//melicidade
+   var osasco = new google.maps.LatLng(-23.526464, -46.776838);//osasco
+   var origin = new google.maps.LatLng(-23.531192, -46.761812);//presidente altino
 
 
     var directionsService = new google.maps.DirectionsService();
-  
  
-    var request = {
-        origin: origin,
-        destination: destination,
-        travelMode: 'DRIVING',
-    };
-  
-    directionsService.route(request, function(results, status) {
-        console.log(results);
-        var routes = results.routes[0].overview_path;
-        var time = "Chegará em "+ results.routes[0].legs[0].duration.text;
+    // var request = {
+    //     origin: origin,
+    //     destination: destination,
+    //     travelMode: 'DRIVING',
+    // };
 
-        console.log(time);
-        
-        var points = [];
-				
-        for (var i = 0; i < routes.length; i++){
-            points[i] = {
-				lat: routes[i].lat(),
-				lng: routes[i].lng()
+    if (route) {
+        request = {
+            origin: origin,
+            destination: destination,
+            travelMode: 'DRIVING',
+         };
+         addMarker(origin, destination);
+         directionsService.route(request, function(results, status) {
+            var routes = results.routes[0].overview_path;
+            var time = "Chegará em "+ results.routes[0].legs[0].duration.text;
+            var points = [];
+                    
+            for (var i = 0; i < routes.length; i++){
+                points[i] = {
+                    lat: routes[i].lat(),
+                    lng: routes[i].lng()
+                }
             }
-        }
-		
-		var polyLine = new google.maps.Polyline({
-			path : points,
-			strokeColor: 'blue',
-			strokeWeight: 5,
-			strokeOpacity: 0.5,
-            visible: true,
-		});
-        polyLine.setMap(map);
-        addMarker(origin, destination);
-
-        var durationTravel = document.getElementById("time");
-        durationTravel.innerHTML = time;
-    });
+            
+            var polyLine = new google.maps.Polyline({
+                path : points,
+                strokeColor: 'blue',
+                strokeWeight: 5,
+                strokeOpacity: 0.5,
+                visible: true,
+            });
+            polyLine.setMap(map);
+            
+            var durationTravel = document.getElementById("time_blue");
+            durationTravel.innerHTML = time;
+        });
+    }
+    else {
+        request = {
+            origin: osasco,
+            destination: destination,
+            travelMode: 'DRIVING',
+         };
+         addMarker(osasco, destination);
+         directionsService.route(request, function(results, status) {
+            var routes = results.routes[0].overview_path;
+            var time = "Chegará em "+ results.routes[0].legs[0].duration.text;
+            var points = [];
+                    
+            for (var i = 0; i < routes.length; i++){
+                points[i] = {
+                    lat: routes[i].lat(),
+                    lng: routes[i].lng()
+                }
+            }
+            
+            var polyLine = new google.maps.Polyline({
+                path : points,
+                strokeColor: 'yellow',
+                strokeWeight: 5,
+                strokeOpacity: 0.8,
+                visible: true,
+            });
+            polyLine.setMap(map);
+            
+            var durationTravel = document.getElementById("time_yellow");
+            durationTravel.innerHTML = time;
+        });
+    }
+  
 }
 
 function addMarker(origin, destination) {
@@ -381,6 +414,6 @@ function addMarker(origin, destination) {
 }
 
 function removeMarker() {
-
+    setMapOnAll(null);
 }
 

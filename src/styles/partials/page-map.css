@@ -24,34 +24,35 @@
     margin: 0 1rem 1.5rem 1rem;
 } 
 
-.osasco {
-    background: var(--color-primary-dark);
+.locals .shuttle button {
+    border: none;
+    cursor: pointer;
+    transition: 0.2;
+
     width: 15rem;
     height: 6rem;
     border-radius: 0.8rem;
-    /* font-weight: 700; */
+
     font-size: 1.5rem;
     font-family: Archivo;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-title-in-primary);
     text-align: center;
+}
+
+.locals .shuttle button:hover{
+    opacity: 0.6;
+} 
+
+.osasco {
+    background: var(--color-primary-dark);
+    color: var(--color-title-in-primary);
 }
 
 .presidente-altino {
     background: var(--color-secondary);
-    width: 15rem;
-    height: 6rem;
-    border-radius: 0.8rem;
-    /* font-weight: 700; */
-    font-size: 1.5rem;
-    font-family: Archivo;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: var(--color-text-in-primary);
-    text-align: center;
 }
 
 .melicidade {
@@ -68,7 +69,8 @@
     color: var(--color-title-in-primary);
 }
 
-#time {
+#time_blue,
+#time_yellow {
     font-size: 1.5rem;
     font-family: Archivo;
     display: flex;
@@ -76,6 +78,7 @@
     justify-content: center;
     color: var(--color-title-in-primary);
     text-align: center;
+    margin-left: 1rem;
 }
 
 
@@ -123,37 +126,29 @@
         justify-content: center;
         margin: 0 1rem 1.5rem 1rem;
     } 
+
+    .locals .shuttle button {
+        border: none;
+        cursor: pointer;
+        transition: 0.2;
     
-    .osasco {
-        background: var(--color-primary-dark);
         width: 17rem;
         height: 6rem;
         border-radius: 0.8rem;
-        /* font-weight: 700; */
+    
         font-size: 1.6rem;
         font-family: Archivo;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--color-title-in-primary);
         text-align: center;
     }
     
-    .presidente-altino {
-        background: var(--color-secondary);
-        width: 17rem;
-        height: 6rem;
-        border-radius: 0.8rem;
-        /* font-weight: 700; */
-        font-size: 1.6rem;
-        font-family: Archivo;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--color-text-in-primary);
-        text-align: center;
-    }
-    
+    .locals .shuttle button:hover{
+        opacity: 0.6;
+    } 
+
+     
     .melicidade {
         background: var(--color-primary);
         width: 17rem;
@@ -168,7 +163,8 @@
         color: var(--color-title-in-primary);
     }
     
-    #time {
+    #time_blue,
+    #time_yellow {
         font-size: 1.5rem;
         font-family: Archivo;
         display: flex;
@@ -176,7 +172,7 @@
         justify-content: center;
         color: var(--color-title-in-primary);
         text-align: center;
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
     
     
